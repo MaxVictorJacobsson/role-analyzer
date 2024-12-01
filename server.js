@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import 'dotenv/config';
 
 import express from 'express';
 import cors from 'cors';
@@ -10,7 +9,11 @@ const groq = new Groq({
 });
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['https://victors-spectacular-site-73208d799ee16f.webflow.io', 'https://www.memir.io'],
+  methods: ['POST', 'GET'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.post('/analyze-role', async (req, res) => {
