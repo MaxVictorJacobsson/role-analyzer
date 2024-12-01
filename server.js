@@ -13,10 +13,12 @@ app.use(cors({
   origin: [
     'https://victors-spectacular-site-73208d799ee16f.webflow.io', 
     'https://www.memir.io',
-    'https://role-analyzer.onrender.com/analyze-role',
-    'https://role-analyzer.onrender.com/analyze-lifestyle'
+    'https://memir.io',
+    'http://www.memir.io',
+    'http://memir.io'
   ],
-  methods: ['POST', 'GET'],
+  methods: ['POST', 'GET', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
 app.use(express.json());
