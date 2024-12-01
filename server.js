@@ -32,7 +32,7 @@ app.post('/analyze-role', async (req, res) => {
         },
         {
           role: "user",
-          content: `Please provide a comprehensive description for the role of: ${jobTitle}. Include: 
+          content: `Please provide a summarized description for the role of: ${jobTitle}.The description should be 200 words or less.Include: 
           1. Brief overview and envrioment of their work
           2. Key responsibilities`
         }
