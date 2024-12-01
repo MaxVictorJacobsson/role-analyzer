@@ -10,7 +10,11 @@ const groq = new Groq({
 
 const app = express();
 app.use(cors({
-  origin: ['https://victors-spectacular-site-73208d799ee16f.webflow.io', 'https://www.memir.io'],
+  origin: [
+    'https://victors-spectacular-site-73208d799ee16f.webflow.io', 
+    'https://www.memir.io',
+    'https://role-analyzer.onrender.com/analyze-role'
+  ],
   methods: ['POST', 'GET'],
   credentials: true
 }));
